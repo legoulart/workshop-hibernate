@@ -1,17 +1,33 @@
 package com.example.workshop.domain.enums;
 
 public enum EstadoPagamento {
-	PENDENTE(0),
-	QUITADO(1),
-	CANCELADO(2);
-	
-	private final int value;
-	
-	private EstadoPagamento(int value){
-		this.value = value;
+	PENDENTE(0, "Pendente"), QUITADO(1, "Quitado"), CANCELADO(2, "Cancelado");
+
+	private final int cod;
+	private final String descricao;
+
+	private EstadoPagamento(int cod, String descricao) {
+		this.cod = cod;
+		this.descricao = descricao;
 	}
-	
-	public int getValue() {
-		return value;
+
+	public int getCod() {
+		return cod;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public static EstadoPagamento toEnum(Integer cod) {
+		if (cod == null)
+			return null;
+
+		for (EstadoPagamento x : EstadoPagamento.values()) {
+			if (cod.equals(x.getCod()))
+				return x;
+		}
+
+		throw new IllegalArgumentException("Id inválido." + cod);
 	}
 }
