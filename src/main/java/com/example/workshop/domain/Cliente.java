@@ -8,12 +8,15 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.CollectionTable;
+import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import org.hibernate.validator.constraints.UniqueElements;
 
 import com.example.workshop.domain.enums.TipoCliente;
 
@@ -26,7 +29,10 @@ public class Cliente implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
+	
+	@Column(unique = true)
 	private String email;
+	
 	private String cpfOuCnpj;
 	
 	private Integer tipo;
