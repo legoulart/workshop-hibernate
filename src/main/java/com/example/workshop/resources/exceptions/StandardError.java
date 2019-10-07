@@ -1,4 +1,4 @@
-package com.example.workshop.resources.exception;
+package com.example.workshop.resources.exceptions;
 
 import java.io.Serializable;
 
