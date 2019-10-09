@@ -11,7 +11,6 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.example.workshop.domain.Categoria;
-import com.example.workshop.domain.Cliente;
 import com.example.workshop.dto.CategoriaDTO;
 import com.example.workshop.repositories.CategoriaRepository;
 import com.example.workshop.services.exceptions.DataIntegrityException;
@@ -56,6 +55,7 @@ public class CategoriaService {
 		return repo.findAll();
 	}
 	
+	@SuppressWarnings("deprecation")
 	public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction){
 		PageRequest pageRequest = new PageRequest(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		return repo.findAll(pageRequest);
