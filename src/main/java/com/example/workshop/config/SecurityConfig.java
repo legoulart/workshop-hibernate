@@ -25,7 +25,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	private Environment env;
 	
 	private static final String[] PUBLIC_MATCHERS = {
-			"/h2-console/**"
+			"/h2-console/**",
+		    "/swagger-ui.html",
+		    "/webjars/**",
+		    "/v2/**",
+		    "/swagger-resources/**"
+
 	};
 
 	private static final String[] PUBLIC_MATCHERS_GET = {
