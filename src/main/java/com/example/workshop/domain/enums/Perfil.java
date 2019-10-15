@@ -1,8 +1,8 @@
 package com.example.workshop.domain.enums;
 
 public enum Perfil {
-	ADMIN(1, "ROLE_ADMIN"),
-	CLIENTE(2, "ROLE_CLIENTE");
+	ADMIN(0, "ROLE_ADMIN"),
+	CLIENTE(1, "ROLE_CLIENTE");
 	
 	private final int cod;
 	private final String descricao;
