@@ -15,7 +15,6 @@ import com.example.workshop.domain.ItemPedido;
 import com.example.workshop.domain.PagamentoComBoleto;
 import com.example.workshop.domain.Pedido;
 import com.example.workshop.domain.enums.EstadoPagamento;
-import com.example.workshop.repositories.ClienteRepository;
 import com.example.workshop.repositories.ItemPedidoRepository;
 import com.example.workshop.repositories.PagamentoRepository;
 import com.example.workshop.repositories.PedidoRepository;
